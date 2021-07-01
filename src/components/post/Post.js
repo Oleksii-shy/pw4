@@ -1,10 +1,9 @@
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 export default function Post({item: {id, title, body}}) {
     return (
         <div>
-            <hr/>
-            {id}. {title}
+            {id}. {title} - <Link to={'/posts/' + id + '/comments'}>Comments</Link>
             <p><i>{body}</i></p>
-            <hr/>
         </div>
     );
 }
